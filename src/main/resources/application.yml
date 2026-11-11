@@ -1,0 +1,19 @@
+server:
+  port: 8080
+  servlet:
+    session:
+      timeout: 30m
+      cookie:
+        http-only: true
+        same-site: lax
+
+spring:
+  application:
+    name: secure-hello
+
+app:
+  security:
+    username: test
+    # BCrypt hash only. The demo password appears in README/tests for reproducibility;
+    # it is never stored in this file and never compared as plaintext.
+    password-hash: "$2a$10$l2pJoUdWQyRyUb3fncvLkO2BXX05rXTzGBlr0shqpRnpdaQFbr4jS"
